@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Phaxs Clicker</title>
+
+<style>
+body {
+    background: #111;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+}
+
+#adminPanel {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 300px;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: #1e1e1e;
+    border: 2px solid #00ff99;
+    padding: 10px;
+    display: none; 
+    z-index: 9999;
+}
+
+#adminPanel button {
+    width: 100%;
+    margin: 4px 0;
+    padding: 6px;
+    background: #333;
+    color: white;
+    border: 1px solid #555;
+    cursor: pointer;
+}
+
+#adminPanel button:hover {
+    background: #444;
+}
+
+#adminPanel input {
+    width: 100%;
+    margin: 4px 0;
+    padding: 5px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Phaxs Clicker</h1>
+<div id="content"></div>
+
+<div id="adminPanel">
+
+<h3>Admin Panel</h3>
+
+<button onclick="resetAll()">RESET ALL</button>
+
+<hr>
+
+<input type="password" id="adminCodeInput" placeholder="Enter Code">
+<button onclick="unlockAdmin()">Unlock Admin</button>
+
+<div id="adminControls" style="display: none;">
+
+<button onclick="addMoney(100)">+100</button>
+<button onclick="addMoney(1000)">+1K</button>
+<button onclick="addMoney(10000)">+10K</button>
+<button onclick="addMoney(100000)">+100K</button>
+<button onclick="addMoney(1000000)">+1M</button>
+<button onclick="addMoney(1000000000)">+1B</button>
+
+<button onclick="setMoney(0)">Set 0</button>
+<button onclick="maxMoney()">Max Money</button>
+<button onclick="halveMoney()">Halve Money</button>
+<button onclick="doubleMoney()">Double Money</button>
+
+<button onclick="randomMoney()">Random Money</button>
+<button onclick="stealMoney()">Steal 10%</button>
+<button onclick="addPercentage(25)">+25%</button>
+<button onclick="addPercentage(100)">+100%</button>
+
+<button onclick="setNegative()">Set Negative</button>
+<button onclick="setToOne()">Set To 1</button>
+
+<hr>
+
+<button onclick="toggleInfiniteMoney()">Infinite</button>
+<button onclick="toggleSlowInfinite()">Slow Infinite</button>
+<button onclick="toggleFastInfinite()">Fast Infinite</button>
+
+<hr>
+
+<button onclick="setClickMultiplier(2)">Click x2</button>
+<button onclick="setClickMultiplier(10)">Click x10</button>
+<button onclick="setClickMultiplier(100)">Click x100</button>
+<button onclick="setClickMultiplier(1000)">Click x1000</button>
+
+<hr>
+
+<button onclick="toggleAutoClicker()">Auto Click</button>
+<button onclick="toggleSuperAutoClicker()">Super Auto</button>
+<button onclick="toggleUltraAutoClicker()">Ultra Auto</button>
+
+</div>
+
+</div>
+
+<script src="bundle.js"></script>
+<script src="admin.js"></script>
+
+<script>
+document.addEventListener("keydown", function(e){
+    if(e.key === "`"){
+        const panel = document.getElementById("adminPanel");
+        panel.style.display =
+            panel.style.display === "block" ? "none" : "block";
+    }
+});
+</script>
+
+</body>
+</html>
