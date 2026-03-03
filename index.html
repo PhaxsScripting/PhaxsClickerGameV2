@@ -16,19 +16,19 @@ body {
     position: fixed;
     top: 10px;
     right: 10px;
-    width: 300px;
+    width: 320px;
     max-height: 90vh;
     overflow-y: auto;
     background: #1e1e1e;
     border: 2px solid #00ff99;
     padding: 10px;
-    display: none; 
+    display: none;
     z-index: 9999;
 }
 
 #adminPanel button {
     width: 100%;
-    margin: 4px 0;
+    margin: 3px 0;
     padding: 6px;
     background: #333;
     color: white;
@@ -66,47 +66,51 @@ body {
 
 <div id="adminControls" style="display: none;">
 
-<button onclick="addMoney(100)">+100</button>
-<button onclick="addMoney(1000)">+1K</button>
-<button onclick="addMoney(10000)">+10K</button>
-<button onclick="addMoney(100000)">+100K</button>
-<button onclick="addMoney(1000000)">+1M</button>
-<button onclick="addMoney(1000000000)">+1B</button>
+<h4>Economy</h4>
+<button onclick="modifyClicks(1000000)">+1M</button>
+<button onclick="multiplyClicks(5)">x5</button>
+<button onclick="divideClicks(2)">÷2</button>
+<button onclick="randomizeClicks()">Randomize</button>
+<button onclick="bankrupt()">Bankrupt</button>
+<button onclick="gamble()">Gamble</button>
+<button onclick="drainOverTime()">Drain Over Time</button>
+<button onclick="explodeClicks()">Explode x50</button>
+<button onclick="reverseClicks()">Reverse</button>
+<button onclick="freezeClicks()">Freeze</button>
+<button onclick="chaoticMoney()">Chaos Money</button>
+<button onclick="massiveSpike()">Massive Spike</button>
+<button onclick="slowDecay()">Slow Decay</button>
+<button onclick="fastDecay()">Fast Decay</button>
+<button onclick="tripleRandom()">Triple Random</button>
+<button onclick="halveRandom()">Halve Random</button>
+<button onclick="percentageBoost(250)">+250%</button>
+<button onclick="percentageBoost(-50)">-50%</button>
+<button onclick="prestigeBlast()">Prestige Blast</button>
+<button onclick="nanoBoost()">Nano Boost</button>
 
-<button onclick="setMoney(0)">Set 0</button>
-<button onclick="maxMoney()">Max Money</button>
-<button onclick="halveMoney()">Halve Money</button>
-<button onclick="doubleMoney()">Double Money</button>
+<h4>Upgrades</h4>
+<button onclick="maxUpgrades()">Max Upgrades</button>
+<button onclick="wipeUpgrades()">Wipe Upgrades</button>
+<button onclick="randomizeUpgrades()">Randomize Upgrades</button>
+<button onclick="duplicateUpgrades()">Duplicate Upgrades</button>
+<button onclick="corruptUpgrades()">Corrupt Upgrades</button>
+<button onclick="boostUpgrades()">Boost Upgrades</button>
+<button onclick="drainUpgrades()">Drain Upgrades</button>
+<button onclick="invertUpgrades()">Invert Upgrades</button>
+<button onclick="spikeUpgrades()">Spike Upgrades</button>
+<button onclick="chaosUpgrades()">Chaos Upgrades</button>
 
-<button onclick="randomMoney()">Random Money</button>
-<button onclick="stealMoney()">Steal 10%</button>
-<button onclick="addPercentage(25)">+25%</button>
-<button onclick="addPercentage(100)">+100%</button>
-
-<button onclick="setNegative()">Set Negative</button>
-<button onclick="setToOne()">Set To 1</button>
-
-<hr>
-
-<button onclick="toggleInfiniteMoney()">Infinite</button>
-<button onclick="toggleSlowInfinite()">Slow Infinite</button>
-<button onclick="toggleFastInfinite()">Fast Infinite</button>
-
-<hr>
-
-<button onclick="setClickMultiplier(2)">Click x2</button>
-<button onclick="setClickMultiplier(10)">Click x10</button>
-<button onclick="setClickMultiplier(100)">Click x100</button>
-<button onclick="setClickMultiplier(1000)">Click x1000</button>
-
-<hr>
-
-<button onclick="toggleAutoClicker()">Auto Click</button>
-<button onclick="toggleSuperAutoClicker()">Super Auto</button>
-<button onclick="toggleUltraAutoClicker()">Ultra Auto</button>
+<h4>Time</h4>
+<button onclick="speedGame(10)">Speed x10</button>
+<button onclick="speedGame(0.5)">Slow Motion</button>
+<button onclick="rapidFire()">Rapid Fire</button>
+<button onclick="superRapid()">Super Rapid</button>
+<button onclick="ultraRapid()">Ultra Rapid</button>
+<button onclick="tickStorm()">Tick Storm</button>
+<button onclick="timeWarp()">Time Warp</button>
+<button onclick="stutterMode()">Stutter Mode</button>
 
 </div>
-
 </div>
 
 <script src="bundle.js"></script>
